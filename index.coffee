@@ -60,7 +60,7 @@ module.exports = class VariableScopeRule
                         else if v.value then v.value.base
                         else v.base
 
-                        name = base.value
+                        name = base?.value
                         assigns[name] = [] unless assigns[name]
                         assigns[name].push child
                 when 'Comment'
